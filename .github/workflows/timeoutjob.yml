@@ -1,0 +1,16 @@
+name: Job timeout  workflow
+
+on: push
+
+jobs:
+ timeout-job:
+   runs-on: ubuntu-latest
+   timeout-minutes: 1
+   steps:
+     - name: checkout code
+       uses: actions/checkout@v4
+
+     - name: Simulate Long task
+       run: sleep 400
+
+       
