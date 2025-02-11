@@ -1,0 +1,10 @@
+name: Access workflow context
+
+on: [push,pull_request]
+
+jobs: 
+  context-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print workflow context
+        run: echo "Repository: ${{ github.repository }}"
