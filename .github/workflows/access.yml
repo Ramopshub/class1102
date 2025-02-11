@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print workflow context
-        run: echo "Repository: ${{ github.repository }}"
+        run: echo "Repository:\"${{ github.repository }}\""
