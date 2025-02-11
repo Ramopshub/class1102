@@ -10,4 +10,7 @@ jobs:
         run: |
          echo "Repository:"${{ github.repository }}""
          echo "Triggering Actor:"${{ github.actor}}""
+         echo "Branch:"${{ github.ref}}""
+         echo "Event name:"${{ github.event_name}}""
+         echo "Work name:"${{ github.workflow}}""
         
