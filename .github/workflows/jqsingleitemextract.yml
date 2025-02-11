@@ -1,0 +1,17 @@
+name: Extract data
+
+on:  workflow_dispatch
+
+jobs:
+  extract-api-json:
+     runs-on: ubuntu-latest
+     steps:
+       - name: fetch Github User Data
+         run: |
+           curl -s https://api.github.com/users/Ramopshub > user.json
+
+       - name: Extract name using JQ
+         run: |
+          NAME=$(jq -r '.name' user.json)
+          echo "Extracted Name: $NAME"
+       
